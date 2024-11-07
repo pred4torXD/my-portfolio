@@ -1,0 +1,242 @@
+:root {
+  --primary-color: #7600bc;
+  --secondary-color: lightgray;
+  --background-color: #e8bcf0;
+  --text-color: gray;
+  --white: #fff;
+}
+
+/* General Styles */
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: var(--background-color);
+}
+
+/* Navigation Bar */
+#home {
+  background-color: var(--primary-color);
+  padding: 2cm 1cm;
+  margin: -1cm;
+}
+
+.topmenu {
+  color: var(--secondary-color);
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.topmenu:hover {
+  color: var(--white);
+  font-weight: bolder;
+  text-decoration: underline;
+  background-color: var(--primary-color);
+}
+
+.topdiv {
+  float: right;
+  padding-right: 1cm;
+}
+.profile_name {
+  float: left;
+  padding-left: 2cm;
+  /* Add the styles here */
+}
+
+.profile_name .contact_info {
+  font-size: 15px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.contact_info img {
+  width:25px;
+  margin-right: 10px;
+  float:left;
+}
+
+/* Titles */
+h2 {
+  text-align: center;
+  font-size: 50px;
+  color: var(--primary-color);
+  margin: 30px 60px 0;
+}
+
+.introduction {
+  text-align: center;
+  font-size: 30px;
+  margin: 30px 0 20px;
+}
+
+/* About Me */
+.container {
+  display: flex;
+}
+
+#about-me h1 {
+  font-size: 65px;
+  margin-top: 90px;
+  color: var(--primary-color);
+}
+
+#about-me p {
+  font-size: 25px;
+  color: rgb(128, 128, 128);
+  margin-top: -1cm;
+}
+
+.profile_image {
+  width: 550px;
+  height: fit-content;
+  margin: 5px;
+}
+
+/* Skills */
+.all_skills {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.skill {
+  border: 1px solid gray;
+  border-radius: 6px;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  width: 250px;
+  font-size: 20px;
+  box-shadow: 0 3px 10px gray;
+  transition: transform 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+}
+
+.skill img {
+  height: 50px;
+}
+
+/* Projects */
+.projects-container {
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+.project-card {
+  margin: 0 15px 15px 30px;
+  padding-bottom: 5px;
+}
+
+.project-card h3 {
+  font-size: 25px;
+  margin-left: 30px;
+}
+
+.project-card li {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+/* Recommendations */
+.all_recommendations {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-flow: wrap;
+  padding: 20px;
+}
+
+.recommendation {
+  font-style: italic;
+  text-align: left;
+  width: 21.875rem;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-color);
+  margin: 10px;
+  border: 1px solid gray;
+  font-size: 18px;
+  height: 150px;
+}
+
+.recommendation span {
+  color: var(--primary-color);
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Form Pop-up */
+.popup {
+  position: fixed;         /* Fixed position to keep the popup at the center */
+  top: 50%;                /* 50% from the top of the screen */
+  left: 50%;               /* 50% from the left of the screen */
+  transform: translate(-50%, -50%); /* Adjust to center the popup */
+  visibility: hidden;      /* Hidden by default, visible only when shown */
+  background-color: white; /* White background */
+  border-radius: 3mm;
+  width: 400px;            /* Set the width of the popup */
+  padding: 20px;           /* Add padding inside the popup */
+  text-align: center;      /* Center the text */
+  z-index: 1000;           /* Ensure the popup appears above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a floating effect */
+}
+
+/* Popup Image Styling */
+.popup img {
+  width: 50px;             /* Set the width of the image */
+  margin-bottom: 15px;     /* Add margin below the image */
+}
+
+/* Popup Header Text Styling */
+.popup h3 {
+  font-size: 20px;         /* Set the font size for the message */
+  margin-bottom: 15px;     /* Add space between the message and the button */
+}
+
+/* Popup Button Styling */
+.popup button {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--white);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.popup button:hover {
+  background-color: #5a00a2; /* Darker shade for hover effect */
+}
+
+/* Scroll to Top Button */
+.iconbutton {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.iconbutton a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.iconbutton a:hover {
+  color: lightgray;
+}
